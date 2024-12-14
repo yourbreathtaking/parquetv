@@ -3,8 +3,7 @@
     <header id="header">
       <div class="row">
         <h1 class="title">visualization geoparquet</h1>
-        <button @click="showLoad">Load Data</button>
-        <button @click="showAbout">About</button>
+
       </div>
       <div class="row subheader">
         <span class="title">
@@ -19,7 +18,7 @@
           )</span>
         </span>
         <button v-if="metadata" @click="showMetadata">Parquet Metadata</button>
-        <button v-if="geoMetadata" @click="showGeoMetadata">GeoParquet Metadata</button>
+
       </div>
     </header>
     <main id="main">
@@ -119,7 +118,7 @@ function getDefaultUrl() {
     return url;
   }
   else {
-    const relPath = './airports.parquet';
+    const relPath = './data4.parquet';
     const absPath = new URL(relPath, window.location.href);
     return absPath.toString();
   }
